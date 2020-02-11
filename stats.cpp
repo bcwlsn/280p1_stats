@@ -1,4 +1,4 @@
-
+XXX
 #ifndef STATS_H
 #define STATS_H
 /* stats.h
@@ -33,7 +33,14 @@ std::vector<std::vector<double>> summarize(std::vector<double> v) {
 
 //EFFECTS: returns the count of the numbers in v
 int count(std::vector<double> v) {
-	return 0;
+	int count = 0; 
+
+	for (int i = 0; i < v.size(); ++i )
+	{
+		++count;
+	}
+	
+	return count;
 }
 
 //REQUIRES: v is not empty
