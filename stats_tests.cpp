@@ -23,6 +23,10 @@ using namespace std;
 void test_sum_small_data_set();
 
 // Add prototypes for you test functions here.
+void test_count_simple(); 
+
+
+
 
 int main()
 {
@@ -46,4 +50,17 @@ void test_sum_small_data_set()
   cout << "PASS!" << endl;
 }
 
-// Add the test function implementations here.
+void test_count_simple() 
+{
+  cout << "COUNT Function--Simple Test: ";
+
+  vector<double> data;
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+
+  assert(count(data) == 3);
+
+  cout << "PASS!" << endl;
+}
+
