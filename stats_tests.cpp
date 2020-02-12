@@ -22,6 +22,7 @@
 using namespace std;
 
 //Function Prototypes 
+void test_summarize_simple_small_dataset();
 void test_sum_small_data_set();
 void test_count_simple(); 
 void test_sum_simple();
@@ -37,6 +38,7 @@ void test_stdev_simple_test();
 // The Program
 int main()
 {
+  test_summarize_simple_small_dataset();
   test_sum_small_data_set();
   test_count_simple();
   test_sum_simple();
@@ -51,9 +53,28 @@ int main()
   return 0;
 }
 
+// Function Implementations
+void test_summarize_simple_small_dataset() 
+{
+  cout << "Test -- Module, STATS.CPP // Function: SUMMARIZE: ";
+
+  vector<double>data; 
+  vector<vector<double>> data_2D; 
+
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+
+  data_2D = summarize(data); 
+
+  assert(summarize(data) == data_2D);
+
+  cout << "PASSED!" << endl; 
+}
+
 void test_sum_small_data_set()
 {
-  cout << "Test -- Module, STATS.CPP // Function, SUM: " << endl;
+  cout << "Test -- Module, STATS.CPP // Function, SUM: ";
 
   vector<double> data;
   data.push_back(1);
