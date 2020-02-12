@@ -18,6 +18,7 @@
 #include <iostream>
 #include <cassert>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 //Function Prototypes 
