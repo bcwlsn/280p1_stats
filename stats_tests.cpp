@@ -24,7 +24,7 @@ void test_sum_small_data_set();
 
 // Add prototypes for you test functions here.
 void test_count_simple(); 
-
+void test_sum_simple();
 
 
 
@@ -32,7 +32,8 @@ int main()
 {
   test_sum_small_data_set();
   // Call your test functions here
-
+  test_count_simple();
+  test_sum_simple();
   return 0;
 }
 
@@ -64,3 +65,19 @@ void test_count_simple()
   cout << "PASS!" << endl;
 }
 
+void test_sum_simple() 
+{
+  cout << "Test -- Module, STATS.CPP / Function, SUM: ";
+  
+  vector<double> data; 
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+
+  assert(sum(data) == 6);
+
+  cout << "PASSED!" << endl; 
+
+  // I want a test case to test a set with only one element in the vector. Probably
+  // need to write a test module strictly for one element data sets. 
+}
