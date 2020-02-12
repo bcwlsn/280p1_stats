@@ -28,6 +28,7 @@ void test_mean_simple_even_sized_dataset();
 void test_mean_simple_odd_sized_dataset();
 void test_median_simple_even_sized_dataset();
 void test_median_simple_odd_sized_dataset();
+void test_mode_simple_test();
 
 // The Program
 int main()
@@ -39,6 +40,7 @@ int main()
   test_mean_simple_odd_sized_dataset(); 
   test_median_simple_even_sized_dataset();
   test_median_simple_odd_sized_dataset();
+  test_mode_simple_test();
   return 0;
 }
 
@@ -144,4 +146,18 @@ void test_median_simple_odd_sized_dataset()
   assert(median(data) == 2);
 
   cout << "PASSED!" << endl; 
+}
+
+void test_mode_simple_test() 
+{
+  cout << "Test -- Module, STATS.CPP / Function, MODE: ";
+  vector<double> data;
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+  data.push_back(2);
+
+  assert(mode(data) == 2);
+
+  cout << "PASSED!" << endl;
 }
