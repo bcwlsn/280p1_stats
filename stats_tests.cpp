@@ -20,20 +20,21 @@
 #include <vector>
 using namespace std;
 
+//Function Prototypes 
 void test_sum_small_data_set();
-
-// Add prototypes for you test functions here.
 void test_count_simple(); 
 void test_sum_simple();
+void test_mean_simple_even_sized_dataset();
+void test_mean_simple_odd_sized_dataset();
 
-
-
+// The Program
 int main()
 {
   test_sum_small_data_set();
-  // Call your test functions here
   test_count_simple();
   test_sum_simple();
+  test_mean_simple_even_sized_dataset();
+  test_mean_simple_odd_sized_dataset(); 
   return 0;
 }
 
@@ -80,4 +81,34 @@ void test_sum_simple()
 
   // I want a test case to test a set with only one element in the vector. Probably
   // need to write a test module strictly for one element data sets. 
+}
+
+void test_mean_simple_even_sized_dataset() 
+{
+  cout << "Test -- Module, STATS.CPP / Function, MEAN [Even]: "; 
+
+  vector<double> data;
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+  data.push_back(4);
+ 
+  assert(mean(data) == 2.5);  
+ 
+  cout << "PASSED!" << endl; 
+}
+
+void test_mean_simple_odd_sized_dataset() 
+{
+  cout << "Test -- Module, STATS.CPP / Function, MEAN [Odd]: ";
+  
+  vector<double> data;
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+
+  assert(mean(data) == 2); 	
+
+  cout << "PASSED!" << endl;   
+	
 }
