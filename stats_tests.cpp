@@ -30,6 +30,7 @@ void test_median_simple_even_sized_dataset();
 void test_median_simple_odd_sized_dataset();
 void test_mode_simple_test();
 void test_min_simple_test();
+void test_max_simple_test();
 
 // The Program
 int main()
@@ -43,6 +44,7 @@ int main()
   test_median_simple_odd_sized_dataset();
   test_mode_simple_test();
   test_min_simple_test();
+  test_max_simple_test();
   return 0;
 }
 
@@ -179,3 +181,18 @@ void test_min_simple_test()
 
   cout << "PASSED!" << endl; 
 }
+
+void test_max_simple_test()
+{
+  cout << "Test -- Module, STATS.CPP // Function: MAX: ";
+
+  vector<double> data;
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+
+  assert(max(data) == 3);
+
+  cout << "PASSED!" << endl; 
+}
+
