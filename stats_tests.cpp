@@ -31,6 +31,7 @@ void test_median_simple_odd_sized_dataset();
 void test_mode_simple_test();
 void test_min_simple_test();
 void test_max_simple_test();
+void test_stdev_simple_test(); 
 
 // The Program
 int main()
@@ -45,12 +46,13 @@ int main()
   test_mode_simple_test();
   test_min_simple_test();
   test_max_simple_test();
+  test_stdev_simple_test(); 
   return 0;
 }
 
 void test_sum_small_data_set()
 {
-  cout << "test_sum_small_data_set" << endl;
+  cout << "Test -- Module, STATS.CPP // Function, SUM: " << endl;
 
   vector<double> data;
   data.push_back(1);
@@ -64,7 +66,7 @@ void test_sum_small_data_set()
 
 void test_count_simple() 
 {
-  cout << "COUNT Function--Simple Test: ";
+  cout << "Test -- Module, STATS.CPP // Function, COUNT: ";
 
   vector<double> data;
   data.push_back(1);
@@ -78,7 +80,7 @@ void test_count_simple()
 
 void test_sum_simple() 
 {
-  cout << "Test -- Module, STATS.CPP / Function, SUM: ";
+  cout << "Test -- Module, STATS.CPP // Function, SUM: ";
   
   vector<double> data; 
   data.push_back(1);
@@ -95,7 +97,7 @@ void test_sum_simple()
 
 void test_mean_simple_even_sized_dataset() 
 {
-  cout << "Test -- Module, STATS.CPP / Function, MEAN [Even]: "; 
+  cout << "Test -- Module, STATS.CPP // Function, MEAN [Even]: "; 
 
   vector<double> data;
   data.push_back(1);
@@ -110,7 +112,7 @@ void test_mean_simple_even_sized_dataset()
 
 void test_mean_simple_odd_sized_dataset() 
 {
-  cout << "Test -- Module, STATS.CPP / Function, MEAN [Odd]: ";
+  cout << "Test -- Module, STATS.CPP // Function, MEAN [Odd]: ";
   
   vector<double> data;
   data.push_back(1);
@@ -125,7 +127,7 @@ void test_mean_simple_odd_sized_dataset()
 
 void test_median_simple_even_sized_dataset() 
 {
-  cout << "Test -- Module, STATS.CPP / Function, MEADIAN [Even]: ";
+  cout << "Test -- Module, STATS.CPP // Function, MEADIAN [Even]: ";
 
   vector<double> data; 
   data.push_back(1);
@@ -140,7 +142,7 @@ void test_median_simple_even_sized_dataset()
 
 void test_median_simple_odd_sized_dataset() 
 {
-  cout << "Test -- Module, STATS.CPP / Function, MEDIAN [Odd]: ";
+  cout << "Test -- Module, STATS.CPP // Function, MEDIAN [Odd]: ";
 
   vector<double> data;
   data.push_back(1);
@@ -154,7 +156,7 @@ void test_median_simple_odd_sized_dataset()
 
 void test_mode_simple_test() 
 {
-  cout << "Test -- Module, STATS.CPP / Function, MODE: ";
+  cout << "Test -- Module, STATS.CPP // Function, MODE: ";
   
   vector<double> data;
   data.push_back(1);
@@ -196,3 +198,18 @@ void test_max_simple_test()
   cout << "PASSED!" << endl; 
 }
 
+void test_stdev_simple_test() 
+{
+  cout << "Test -- Module, STATS.CPP // Function: STANDARD DEVIATION: ";
+
+  vector<double> data;
+  data.push_back(1);
+  data.push_back(2);
+  data.push_back(3);
+  data.push_back(10); 
+
+  assert(stdev(data) == sqrt(7.5));
+
+  cout << "PASSED!" << endl; 
+	
+}
